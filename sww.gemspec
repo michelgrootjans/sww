@@ -12,6 +12,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{TODO: Write a gem summary}
   gem.homepage      = ""
   gem.add_dependency "xmpp4r"
+  gem.add_dependency "faker"
   gem.add_development_dependency "rspec", "~> 2"
   gem.add_development_dependency "guard-rspec"
   gem.add_development_dependency "rb-inotify", "~> 0.8.8"

@@ -3,9 +3,12 @@ $: << 'lib'
 require 'rubygems'
 require 'sww'
 
-jabberspace = JabberSpace.on "rswwbot@awtest1.vm.bytemark.co.uk", "stoomboot"
+url = "awtest1.vm.bytemark.co.uk"
+name = Faker::Internet.user_name
 
-player = Player.new("gijs", jabberspace.create_room, jabberspace)
-player.play("sww@awtest1.vm.bytemark.co.uk")
+jabberspace = JabberSpace.on "rswwbot@#{url}", "stoomboot"
+
+player = Player.new(name, jabberspace.create_room, jabberspace)
+player.play("sww@#{url}")
 
 $stdin.readline
